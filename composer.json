@@ -25,7 +25,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "laravel/framework": "^8.0",
-        "bpuig/laravel-subby": "dev-add_subscription_features"
+        "bpuig/laravel-subby": "v4.0.0-alpha"
     },
     "require-dev": {
         "illuminate/console": "^8.0.0",
