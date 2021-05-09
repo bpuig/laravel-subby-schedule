@@ -1,6 +1,6 @@
 <img src="https://repository-images.githubusercontent.com/365712449/6a18fb00-b0c5-11eb-96c5-7562ecf01edf" alt="Social Card of Laravel Subby Schedule">
 
-# Laravel Subby
+# Laravel Subby Schedule
 
 **Laravel Subby Schedule** is a scheduling extension for [bpuig/laravel-subby](https://github.com/bpuig/laravel-subby).
 

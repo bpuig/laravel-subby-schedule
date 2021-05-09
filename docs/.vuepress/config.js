@@ -43,7 +43,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     ['/models/', 'Models'],
-                    ['/extras/plan-subscription-schedule.md', 'Plan Subscription Schedule']
+                    ['/models/plan-subscription-schedule.md', 'Plan Subscription Schedule']
                 ]
             }
         ]
