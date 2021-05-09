@@ -1,0 +1,64 @@
+{
+    "name": "bpuig/laravel-subby-schedule",
+    "description": "Laravel Subby Schedules scheduling extension for Laravel Subby.",
+    "type": "library",
+    "keywords": [
+        "plan",
+        "value",
+        "laravel",
+        "feature",
+        "database",
+        "recurring",
+        "subscription"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/bpuig/laravel-subby-schedule/issues",
+        "source": "https://github.com/bpuig/laravel-subby-schedule",
+        "docs": "https://github.com/bpuig/laravel-subby-schedule/blob/master/README.md"
+    },
+    "authors": [
+        {
+            "name": "Borja Puig"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.0",
+        "bpuig/laravel-subby": "dev-add_subscription_features"
+    },
+    "require-dev": {
+        "illuminate/console": "^8.0.0",
+        "illuminate/container": "^8.0.0",
+        "phpunit/phpunit": "^9.0.0",
+        "orchestra/testbench": "^6.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bpuig\\SubbySchedule\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bpuig\\SubbySchedule\\Tests\\": "tests",
+            "Bpuig\\SubbySchedule\\Tests\\Database\\Factories\\": "tests/Database/Factories"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bpuig\\SubbySchedule\\SubbyScheduleServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
