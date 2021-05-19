@@ -1,3 +1,5 @@
+<img src="https://repository-images.githubusercontent.com/365712449/6a18fb00-b0c5-11eb-96c5-7562ecf01edf" alt="Social Card of Laravel Subby Schedule">
+
 # Laravel Subby Schedule
 
 **Laravel Subby Schedule** is an extension for [bpuig/laravel-subby](https://github.com/bpuig/laravel-subby) that allows
@@ -10,12 +12,22 @@ The way this package is made:
 1. You schedule your plan change and specify a service that will launch at change date.
 2. Run the cron schedule job to process them.
 
-## Changelog<a name="changelog"></a>
+## Version Compatibility
 
-Refer to the [Changelog](CHANGELOG.md) for a full history of the project.
+| Laravel | Laravel Subby  | Laravel Subby Schedule           |
+|---------|----------------|----------------------------------|
+| 8.x     | [v4.x](/v4.x/) | [v0.x](/v0.x/) ,  [v1.x](/v1.x/) |
 
-## License<a name="license"></a>
+## Changelog
 
-This software is released under [The MIT License (MIT)](LICENSE.md).
+Refer to the [Changelog](https://bpuig.github.io/laravel-subby-schedule/v1.0/CHANGELOG.html) for a full history of the
+project.
 
-&copy; 2020-2021 B. Puig, Some rights reserved.
+## License
+
+This software is released under [The MIT License (MIT)](LICENSE).
+
+&copy; 2020 - 2021 B. Puig, Some rights reserved.
+
+
+

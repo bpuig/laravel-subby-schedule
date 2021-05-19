@@ -1,6 +1,6 @@
-# Models<a name="models"></a>
+# Models
 
-**Subby Schedule** uses 1 model:
+**Laravel Subby Schedule** uses 1 model:
 
 ```php
 Bpuig\SubbySchedule\Models\PlanSubscriptionSchedule;

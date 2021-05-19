@@ -67,7 +67,7 @@ trait IsScheduled
      */
     public function schedules(): hasMany
     {
-        return $this->hasMany(config('subby.schedule.models.plan_subscription_schedule'), 'subscription_id', 'id');
+        return $this->hasMany(config('subby.schedule.models.plan_subscription_schedule'), 'plan_subscription_id', 'id');
     }
 
     /**
@@ -160,7 +160,7 @@ trait IsScheduled
 
         return app(config('subby.schedule.models.plan_subscription_schedule'))->create([
             'plan_id' => $this->scheduledPlan->id,
-            'subscription_id' => $this->id,
+            'plan_subscription_id' => $this->id,
             'service' => $this->scheduledService,
             'tries' => $this->scheduledTries,
             'timeout' => $this->scheduledTimeout,
@@ -176,7 +176,7 @@ trait IsScheduled
     {
         // Search previous plan change
         $previous = app(config('subby.schedule.models.plan_subscription_schedule'))
-            ->where('subscription_id', $this->id)
+            ->where('plan_subscription_id', $this->id)
             ->notProcessed()
             ->where('scheduled_at', '<=', $this->scheduledDate)
             ->orderBy('scheduled_at', 'DESC')
@@ -187,7 +187,7 @@ trait IsScheduled
         }
 
         $next = app(config('subby.schedule.models.plan_subscription_schedule'))
-            ->where('subscription_id', $this->id)
+            ->where('plan_subscription_id', $this->id)
             ->notProcessed()
             ->where('scheduled_at', '>=', $this->scheduledDate)
             ->orderBy('scheduled_at', 'ASC')

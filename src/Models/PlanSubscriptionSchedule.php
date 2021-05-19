@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package Bpuig\SubbySchedule\Models
  *
  * @property integer $id
- * @property integer $subscription_id
+ * @property integer $plan_subscription_id
  * @property integer $plan_id;
  * @property string $service
  * @property integer $tries
@@ -27,7 +27,7 @@ class PlanSubscriptionSchedule extends Model
      * {@inheritdoc}
      */
     protected $fillable = [
-        'subscription_id',
+        'plan_subscription_id',
         'plan_id',
         'service',
         'tries',
@@ -39,7 +39,7 @@ class PlanSubscriptionSchedule extends Model
      * {@inheritdoc}
      */
     protected $casts = [
-        'subscription_id' => 'integer',
+        'plan_subscription_id' => 'integer',
         'plan_id' => 'integer',
         'service' => 'string',
         'tries' => 'integer',
@@ -68,7 +68,7 @@ class PlanSubscriptionSchedule extends Model
     public function getRules(): array
     {
         return [
-            'subscription_id' => 'required|integer|exists:' . config('subby.tables.plan_subscriptions') . ',id',
+            'plan_subscription_id' => 'required|integer|exists:' . config('subby.tables.plan_subscriptions') . ',id',
             'plan_id' => 'required|integer|exists:' . config('subby.tables.plans') . ',id',
             'service' => 'string',
             'tries' => 'integer',
@@ -84,7 +84,7 @@ class PlanSubscriptionSchedule extends Model
      */
     public function subscription()
     {
-        return $this->belongsTo(config('subby.models.plan_subscription'), 'subscription_id', 'id');
+        return $this->belongsTo(config('subby.models.plan_subscription'), 'plan_subscription_id', 'id');
     }
 
     /**
